@@ -1,0 +1,19 @@
+<div *ngIf="todos[0]">
+	<table class="table">
+		<thead>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Edit</th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let todo of todos;let i=index;">
+				<td>{{i}}</td>
+				<td>{{todo}}</td>
+				<td>
+					<a class="btn btn-info btn-sm" routerLink="/edit/{{i}}">Edit</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<a class="padding-top btn btn-primary btn-sm" routerLink="/create">Add TODO</a>

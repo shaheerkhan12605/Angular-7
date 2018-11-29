@@ -1,0 +1,17 @@
+<div class="row padding-top">
+	<div class="col-md-8">
+		<input type="text" class="form-control" [(ngModel)]="item">
+	</div>
+</div>
+<div class="row padding-top">
+	<div class="col-md-2" [hidden]="editId"> 
+		<button class="btn btn-primary " (click)="addTodo(item)">Add Todo</button>
+	</div>
+
+	<div class="col-md-2" [hidden]="!editId"> 
+		<button class="btn btn-info " (click)="editTodo(editId,item)">Edit Todo</button>
+	</div>
+	<div class="col-md-2" [hidden]="!editId"> 
+		<button  class="btn btn-danger " (click)="deleteTodo(editId)">Delete Todo</button>
+	</div>
+</div>
